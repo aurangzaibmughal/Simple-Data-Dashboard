@@ -31,7 +31,7 @@ if uploaded_file is not None:
     y_columns = st.selectbox("Select Y-axis column", columns)
 
     if st.button("Generate Plot"):
-        st.line_chart(filtered_df.set_index(x_columns, y_columns)[y_columns])
+        st.line_chart(filtered_df.set_index(x_columns) [y_columns])
 else:
     st.write("Waiting on file upload....")
         
